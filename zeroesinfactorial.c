@@ -1,9 +1,7 @@
 #include<stdio.h>
 int factorial_zeroes(int s,int e) {
 	register sum = 0,i,r;
-	
 	for(i=s;i<=e;i++) {
-		
 		r=i;
 		do {
 			r/=5;
