@@ -22,5 +22,4 @@ int main(void) {
 		scanf("%d",&n);
 		printf("%d\n",primeArray[n]);
 	}
-	
 }
