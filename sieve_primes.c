@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
-#define MAX 10000000
 #define LAST_PRIME 664579
+#define MAX 10000000
 int isComposite[MAX+1];
 int primeArray[LAST_PRIME+1];
 void primes() {
