@@ -1,20 +1,20 @@
 #include<stdio.h>
-int xor(int arr[],int s,int e) {
-	int i,xor=0;
-	for(i=s;i<=e;i++) xor ^= arr[i];
-	return xor;
-}
+#define SIZE 100001
 int main() {
-	int t,i,j,size,q,s,e;
+	int t,i,n,q,s,e;
 	scanf("%d",&t);
-	for(i=0;i<t;i++) {
-		scanf("%d",&size);
-		int arr[size];
-		for(j=0;j<size;j++) scanf("%d",&arr[j]);
+	int arr[SIZE];
+	while(t--){
+		scanf("%d",&n);
+		arr[0]=0;
+		for(i=1;i<=n;i++) {
+			scanf("%d",&arr[i]);
+			arr[i]^=arr[i-1];
+		}
 		scanf("%d",&q);
-		for(j=0;j<q;j++) {
+		while(q--){
 			scanf("%d %d",&s,&e);
-			printf("%d\n",xor(arr,s,e));
+			printf("%d\n",arr[s]^arr[e+1]);
 		}
 	}
 }
