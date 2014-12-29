@@ -4,7 +4,6 @@ os.system("rm *.out")
 os.system("rm *.class")
 os.system("git add -A")
 os.system("git status")
-print sys.argv[1]
 os.system("git commit -m \""+sys.argv[1]+"\"")
 git = pexpect.spawn("git push")
 git.expect(": ")
