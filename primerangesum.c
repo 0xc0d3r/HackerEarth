@@ -32,14 +32,12 @@ int main(void) {
 	for(i=0;i<t;i++) {
 		int s,e,j;
 		unsigned long long sum = 0;
-		printf("size = %d\n",sizeof(sum));
 		scanf("%d %d",&s,&e);
 		for(j=s;j<=e;j++) {
 			if(!isComposite[j]) {
 				sum+=j;
-				printf("%d %llu\n",j,sum);
 			}
 		}
+		puts(isPrime(sum)?"YES":"NO");
 	}
-	
 }
