@@ -3,7 +3,6 @@ int main(){
 	int t,n,k,p,temp,count,i;
 	scanf("%d", &t);
 	while(t--){
-		count=0;
 		scanf("%d%d%d",&n,&k,&p);
 		for(i=0;i<k;i++){
 			scanf("%d",&temp);
