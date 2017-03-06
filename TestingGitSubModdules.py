@@ -1,1 +1,1 @@
-print 'Hello, Testing git submodules'
+print 'Hello, Testing git submodules!'
