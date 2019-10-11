@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+void main(){
+	int t,n,a[10][2],p,g,i=0,j=0,cp=0,cg=0,lc=0,eq=0;
+	scanf("%d", &t);             
+	while(t--)
+  { 
+    cp=0,cg=0,eq=0,lc=0;
+    scanf("%d %d",&g,&p);
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {   
+        
+        for(j=0;j<2;j++)
+            scanf("%d",&a[i][j]);
+        if(a[i][0]<a[i][1])
+        cp++;
+        if(a[i][0]==a[i][1]&&a[i][0]==1)
+        eq++; 
+        if(a[i][0]>a[i][1])
+        cg++;
+    }
+       if((cg>cp)||(cp==cg))
+       { 
+       if(p<g)
+       lc=(cg+eq)*p+(cp+eq)*g;
+       else
+       lc=(cg+eq)*g+(cp+eq)*p;
+       }
+       if(cg<cp)
+       {
+        if(p>g)
+        lc=(cp+eq)*g+(cg+eq)*p;
+        else
+        lc=(cp+eq)*p+(cg+eq)*g;
+         }
+        printf("%d\n",lc);
+  }
+    
+}
+
+
