@@ -1,2 +1,3 @@
 # HackerEarth
-My solutions for hacker earth problems
+
+**IMPORTANT:** Please DO NOT copy and paste solutions.
