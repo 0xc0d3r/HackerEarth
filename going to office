@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  
+  int dist, Oc, Of, Od, Cs, Cb, Cm, Cd;
+  
+  cin>>dist;
+  cin>>Oc>>Of>>Od;
+  cin>>Cs>>Cb>>Cm>>Cd;
+  
+  float fare1, fare2;
+  
+  if(dist<=Of)
+     fare1=Oc;
+  else 
+     {
+         fare1= Oc + Od*(dist-Of);
+     }
+    
+    fare2= Cb + Cm*(dist/Cs) + Cd*dist;
+    
+    if(fare2<fare1)
+      cout<<"Classic Taxi";
+    else
+     cout<<"Online Taxi";
+}
